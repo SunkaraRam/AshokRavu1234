@@ -18,31 +18,31 @@ public class BrokenLinks {
 		
 		System.setProperty("webdriver.chrome.driver","D:\\LatestDrivers\\chromedriver.exe");
 		
-		WebDriver driver = new ChromeDriver();
-		
-		driver.get("https://www.flipkart.com/");
-		
-		Thread.sleep(5000);
-		
-		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
-		
-		allLinks.addAll(driver.findElements(By.tagName("img")));
-		
-		List<WebElement> activeLinks = new ArrayList<WebElement>();
-		
-		List<WebElement> deactiveLinks = new ArrayList<WebElement>();
-		
-		for (int i = 0; i < allLinks.size(); i++) {
-			
-			if (allLinks.get(i).getAttribute("href")!=null &&(!allLinks.get(i).getAttribute("href").contains("javascript"))) {
-				
-				activeLinks.add(allLinks.get(i));
-				
-			}else {
-				deactiveLinks.add(allLinks.get(i));
-			}
-			
-		}
+//		WebDriver driver = new ChromeDriver();
+//		
+//		driver.get("https://www.flipkart.com/");
+//		
+//		Thread.sleep(5000);
+//		
+//		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+//		
+//		allLinks.addAll(driver.findElements(By.tagName("img")));
+//		
+//		List<WebElement> activeLinks = new ArrayList<WebElement>();
+//		
+//		List<WebElement> deactiveLinks = new ArrayList<WebElement>();
+//		
+//		for (int i = 0; i < allLinks.size(); i++) {
+//			
+//			if (allLinks.get(i).getAttribute("href")!=null &&(!allLinks.get(i).getAttribute("href").contains("javascript"))) {
+//				
+//				activeLinks.add(allLinks.get(i));
+//				
+//			}else {
+//				deactiveLinks.add(allLinks.get(i));
+//			}
+//			
+//		}
 		
 		System.out.println("All Links  ----->" + allLinks.size());
 		
